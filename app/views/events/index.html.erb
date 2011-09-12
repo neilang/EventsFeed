@@ -14,9 +14,9 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.title %></td>
-    <td><%= event.start_date %></td>
-    <td><%= event.end_date %></td>
-    <td><%= event.description %></td>
+    <td><%= event.friendly_start_date %></td>
+    <td><%= event.friendly_end_date %></td>
+    <td><%= truncate event.description, :length => 20 %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
