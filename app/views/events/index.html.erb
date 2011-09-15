@@ -5,6 +5,7 @@
     <th>Title</th>
     <th>Start date</th>
     <th>End date</th>
+    <th>Location</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -16,6 +17,7 @@
     <td><%= event.title %></td>
     <td><%= event.friendly_start_date %></td>
     <td><%= event.friendly_end_date %></td>
+    <td><%= event.location %></td>
     <td><%= truncate event.notes, :length => 20 %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
