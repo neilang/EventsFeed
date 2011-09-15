@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @events }
+      format.json { render :json => @events.to_json(:except => [:created_at, :updated_at, :id]) }
     end
   end
 
