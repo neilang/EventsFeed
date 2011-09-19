@@ -22,12 +22,11 @@ class Event < ActiveRecord::Base
     end_date.strftime("%d/%m/%Y")
   end
   
-  # To make things easier when working with NSDate, time is in a simpler format
   def startdate
-    start_date.strftime("%Y-%m-%d %H:%M");
+    start_date.to_i
   end
   
   def enddate
-    end_date.strftime("%Y-%m-%d %H:%M");
+    end_date.to_i
   end
 end
